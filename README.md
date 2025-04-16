@@ -38,7 +38,9 @@ docker-compose up --build -d
 
 ## 🧱 Arquitetura da Solução
 
-📌 [Diagrama da Arquitetura](./docs/infra.png)
+### 📌 Diagrama da Arquitetura 
+
+![Diagrama da Arquitetura](./docs/infra.png)
 
 ### Componentes:
 - App1 (Node.js)

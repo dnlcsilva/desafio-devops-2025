@@ -18,7 +18,7 @@ Duas aplicações simples (Node.js e Python/Flask) com cache interno e exportaç
 ## 🛠️ Como Executar o Projeto
 
 ```bash
-git clone <seu-repo>
+git clone https://github.com/dnlcsilva/desafio-devops-2025.git
 cd desafio-devops-2025
 docker-compose up --build -d
 ```

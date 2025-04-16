@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  app1:
+    build: ./app1-node
+    volumes:
+      - ./app1-node/views:/app/app1-node/views
+      - ./docs:/app/docs
+    container_name: app1
+    ports:
+      - "5001:5001"
+
+  app2:
+    build: ./app2-python
+    volumes:
+      - ./docs:/app/docs
+    container_name: app2
+    ports:
+      - "5002:5002"
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    volumes:
+      - ./observability/grafana/provisioning:/etc/grafana/provisioning
+      - ./observability/grafana/dashboards:/var/lib/grafana/dashboards
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=desafio2025
+      - GF_USERS_ALLOW_SIGN_UP=false
+    ports:
+      - "3000:3000"
+

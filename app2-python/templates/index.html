@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>App2 - Python</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #f39c12, #f1c40f); /* Novo background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 450px;
+      #height: 450px;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+    .logo-container {
+      margin-bottom: 24px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      width: 300px;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      border-radius: 10px;
+      background: #fff;
+      padding: 8px;
+      border: 2px solid #f1c40f;
+    }
+    .python-logo {
+      width: 30px;  /* Tamanho do ícone do Python */
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    h1 {
+      color: #007bff;
+      display: inline-block;
+      margin: 0;
+    }
+    .btn {
+      margin-top: 20px;
+      background: #007bff;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .info {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+   <div class="logo-container"> 
+    <img src="/docs/desafio.png" alt="Desafio DevOps 2025" class="logo" />
+   </div>
+    <h1>
+      App em Python 
+      <img src="/docs/python-logo.svg" alt="Python Logo" class="python-logo" />
+    </h1>
+    <p class="info">{{ message }}</p>
+    <a class="btn" href="/hora">Ver Hora Atual</a>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,49 @@
+{
+  "id": null,
+  "uid": "app1-app2-dashboard",
+  "title": "App1 & App2 Metrics",
+  "tags": [],
+  "timezone": "browser",
+  "schemaVersion": 27,
+  "version": 2,
+  "refresh": "5s",
+  "panels": [
+    {
+      "type": "graph",
+      "title": "App1 - HTTP Requests Total",
+      "targets": [
+        {
+          "expr": "app1_requests_total",
+          "legendFormat": "{{route}}",
+          "refId": "A"
+        }
+      ],
+      "datasource": "Prometheus",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "graph",
+      "title": "App2 - HTTP Requests Total",
+      "targets": [
+        {
+          "expr": "flask_http_request_total",
+          "legendFormat": "{{method}} {{status}}",
+          "refId": "B"
+        }
+      ],
+      "datasource": "Prometheus",
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 8
+      }
+    }
+  ]
+}
+
